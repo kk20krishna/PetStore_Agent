@@ -1,10 +1,11 @@
 ### app.py
 
 import dotenv
-dotenv.load_dotenv()
+from agents import create_petstore_agent
 import gradio as gr
 
-from agents import create_petstore_agent
+dotenv.load_dotenv()
+
 petstore_agent = create_petstore_agent()
 
 def chat_fn(messages, history):
@@ -16,4 +17,4 @@ demo = gr.ChatInterface(chat_fn, type="messages", title="Pet Store Agent",
                         description="Interact with the Pet Store API using a ReAct agent. Ask about pets by status, tags, or specific pet details. For example, you can ask 'Find all available pets' or 'Get details for pet ID 12345'.")
 
 if __name__ == "__main__":
-    demo.launch(debug=True)
+    demo.launch(debug=True, share=True)
