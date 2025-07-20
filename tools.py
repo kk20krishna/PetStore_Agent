@@ -1,6 +1,8 @@
 import requests
 import json
 from langchain.tools import tool
+from langchain_community.tools import WikipediaQueryRun
+from langchain_community.utilities import WikipediaAPIWrapper
 from typing import List, Optional
 import random
 from pydantic import BaseModel, Field
@@ -152,6 +154,9 @@ def find_pets_by_status(status: str = "available") -> str:
 #     return json.dumps(response.json(), indent=2)
 
 
+# Wikipedia tool
+wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
+
 # List of all petstore tools
 petstore_tools = [
     add_pet,
@@ -160,4 +165,5 @@ petstore_tools = [
     delete_pet,
     find_pets_by_status,
     # find_pets_by_tags,
+    wikipedia,
 ]
