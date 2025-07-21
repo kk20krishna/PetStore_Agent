@@ -3,7 +3,7 @@
 
 A sophisticated AI-powered chatbot built with LangChain and Gradio that intelligently interacts with the Swagger Pet Store API. This agent can perform various pet store operations through natural language conversations, making API interactions intuitive and user-friendly.
 
-## 🌟 Features
+## Features
 
 - **Intelligent Conversation**: Natural language interface powered by OpenAI's GPT-4o
 - **Pet Store Operations**: Complete CRUD operations for pet management
@@ -12,7 +12,7 @@ A sophisticated AI-powered chatbot built with LangChain and Gradio that intellig
 - **Real-time Processing**: See intermediate steps and tool usage
 - **Memory Persistence**: Conversation history maintained across interactions
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: LangChain for agent orchestration
 - **LLM**: OpenAI GPT-4o
@@ -21,43 +21,7 @@ A sophisticated AI-powered chatbot built with LangChain and Gradio that intellig
 - **Tools**: Custom pet store tools + Wikipedia integration
 - **Language**: Python 3.12+
 
-## 📋 Prerequisites
-
-- Python 3.12 or higher
-- OpenAI API key
-- Internet connection for API calls
-
-## 🚀 Quick Start
-
-### 1. Environment Setup
-
-Create a `.env` file in the project root:
-
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-### 2. Installation
-
-All dependencies are automatically managed by Replit. The project uses:
-
-- `gradio` - Web interface
-- `langchain` - Agent framework
-- `langchain-openai` - OpenAI integration
-- `requests` - HTTP client
-- `python-dotenv` - Environment management
-
-### 3. Running the Application
-
-Click the **Run** button in Replit, or execute:
-
-```bash
-python app.py
-```
-
-The application will start on port 7860 and provide both local and public URLs.
-
-## 💬 Usage Examples
+## Usage Examples
 
 ### Basic Pet Operations
 
@@ -85,11 +49,11 @@ User: "Tell me about Golden Retrievers and then find any Golden Retriever pets i
 Agent: Uses Wikipedia for breed information, then searches the pet store
 ```
 
-## 🔧 Project Structure
+## Project Structure
 
 ```
-├── app.py              # Main Gradio application
-├── agents.py           # Agent creation and configuration
+├── app.py             # Main Gradio application
+├── agents.py          # Agent creation and configuration
 ├── tools.py           # Pet store API tools and schemas
 ├── requirements.txt   # Python dependencies
 ├── pyproject.toml     # Project configuration
@@ -120,7 +84,7 @@ Agent: Uses Wikipedia for breed information, then searches the pet store
 - Wikipedia integration for general queries
 - Pydantic schemas for type safety
 
-## 🔌 API Integration
+## API Integration
 
 The agent integrates with the Swagger Pet Store API v2:
 - **Base URL**: `https://petstore.swagger.io/v2`
@@ -128,7 +92,7 @@ The agent integrates with the Swagger Pet Store API v2:
 - **Data Format**: JSON with structured schemas
 - **Error Handling**: Robust retry mechanisms and validation
 
-## 🎛️ Configuration
+## Configuration
 
 ### Agent Settings
 - **Model**: GPT-4o for optimal performance
@@ -141,35 +105,6 @@ The agent integrates with the Swagger Pet Store API v2:
 - Comprehensive error handling for API failures
 - Automatic retry mechanisms for reliability
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **OpenAI API Key Error**
-   - Ensure your API key is set in the `.env` file
-   - Verify the key has sufficient credits
-
-2. **Pet Store API Errors**
-   - Check internet connectivity
-   - API may occasionally return 404 for non-existent pets
-
-3. **Tool Execution Failures**
-   - Review intermediate steps in the UI
-   - Check console output for detailed error messages
-
-### Debug Mode
-
-The application runs with `debug=True` enabled, providing:
-- Detailed console logging
-- Automatic reloading on code changes
-- Enhanced error messages
-
-## 📈 Performance Considerations
-
-- **Response Time**: Typically 2-5 seconds depending on query complexity
-- **Concurrent Users**: Gradio handles multiple simultaneous conversations
-- **Rate Limits**: Respects OpenAI API rate limits
-- **Memory Usage**: Conversation history is maintained in memory
 
 ## 🔮 Future Enhancements
 
@@ -180,28 +115,42 @@ The application runs with `debug=True` enabled, providing:
 - [ ] Integrate with more pet-related APIs
 - [ ] Add voice interaction capabilities
 
+## Prerequisites
+
+- Python 3.12 or higher
+- OpenAI API key
+- Internet connection for API calls
+
+## Quick Start
+
+### 1. Environment Setup
+
+Create a `.env` file in the project root:
+
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+### 2. Installation
+
+All dependencies are installed from the requirements.txt file:
+
+- `gradio` - Web interface
+- `langchain` - Agent framework
+- `langchain-openai` - OpenAI integration
+- `requests` - HTTP client
+- `python-dotenv` - Environment management
+
+### 3. Running the Application
+
+Execute:
+
+```bash
+python app.py
+```
+
+The application will start on port 7860 and provide both local and public URLs.
+
 ## 📄 License
 
-This project is for educational and demonstration purposes. Please respect the terms of service for:
-- OpenAI API
-- Swagger Pet Store API
-- Wikipedia API
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📞 Support
-
-For issues and questions:
-- Check the troubleshooting section above
-- Review console output for error details
-- Ensure all dependencies are properly installed
-
----
-
-**Built with ❤️ using LangChain, OpenAI, and Gradio**
+This project is for educational and demonstration purposes.
