@@ -1,7 +1,7 @@
 
 # 🐾 Pet Store Agent
 
-A sophisticated AI-powered chatbot built with LangChain and Gradio that intelligently interacts with the Swagger Pet Store API. This agent can perform various pet store operations through natural language conversations, making API interactions intuitive and user-friendly.
+A AI-powered chatbot built with LangChain and Gradio that intelligently interacts with the Swagger Pet Store API. This agent can perform various pet store operations through natural language conversations, making API interactions intuitive and user-friendly.
 
 ## Features
 
