@@ -73,9 +73,6 @@ def add_pet(
     """
     Adds a new pet to the Pet Store.
     """
-    print(
-        f"Adding pet: {name}, Status: {status}, Tags: {tags}, Photo URLs: {photoUrls}"
-    )
 
     url = f"{BASE_URL}/pet"
     payload = {
