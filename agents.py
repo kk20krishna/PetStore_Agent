@@ -28,6 +28,7 @@ def create_petstore_agent():
 
     # Build the agent executor with memory
     agent_executor = AgentExecutor(agent=openai_tools_agent,
+                                   return_intermediate_steps=True,
                                    tools=petstore_tools,
                                    memory=memory,
                                    verbose=True,
