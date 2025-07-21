@@ -2,4 +2,4 @@ modules = ["python-3.12"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["bash", "ffmpeg-full", "libxcrypt"]
+packages = ["bash", "cacert", "cargo", "ffmpeg-full", "freetype", "glibcLocales", "go", "lcms2", "libiconv", "libimagequant", "libjpeg", "libtiff", "libwebp", "libxcrypt", "openjpeg", "rustc", "tcl", "tk", "zlib"]

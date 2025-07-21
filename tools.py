@@ -14,6 +14,7 @@ BASE_URL = "https://petstore.swagger.io/v2"  # Current Pet Store API - v2
 HEADERS = {"Content-Type": "application/json"}
 
 # ---- Args Schemas ----
+# These are used to validate the inputs to the tools.
 
 
 class AddPetInput(BaseModel):
@@ -162,6 +163,7 @@ def find_pets_by_status(status: str = "available") -> str:
     return json.dumps(response.json(), indent=2)
 
 
+# Commented out because it doesn't work with the v2 Pet Store API
 # @tool("find_pets_by_tags", args_schema=FindPetsByTagsInput)
 # def find_pets_by_tags(tags: str) -> str:
 #     """
@@ -183,6 +185,6 @@ petstore_tools = [
     get_pet_by_id,
     delete_pet,
     find_pets_by_status,
-    # find_pets_by_tags,
+    # find_pets_by_tags, # Commented out because it doesn't work with the v2 Pet Store API
     wikipedia,
 ]
