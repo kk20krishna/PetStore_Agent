@@ -8,9 +8,26 @@ dependencies = [
     "langchain-community>=0.3.27",
     "langchain>=0.3.26",
     "langchain-openai>=0.3.28",
+    "beautifulsoup4>=4.12.3",
+    "lxml>=5.2.1",
     "pydantic>=2.11.7",
     "python-dotenv>=1.1.1",
     "requests>=2.32.4",
     "wikipedia>=1.4.0",
     "langchain-core>=0.3.69",
 ]
+
+[tool.poetry]
+name = "petstore-agent"
+version = "1"
+description = "PetStore Agent"
+authors = ["Krishna Kumar S <45288384-urkrishna@users.noreply.replit.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,10 +1,18 @@
-FROM python:3.9-slim-buster
+FROM python:3.11-slim-bookworm
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Poetry
+RUN pip install poetry
 
+# Copy pyproject.toml and poetry.lock*
+COPY pyproject.toml poetry.lock* ./
+
+# Install dependencies
+RUN poetry install --no-root
+
+# Copy the rest of the application code
 COPY . .
 
-CMD ["python", "app.py"]
+# Command to run the application
+CMD ["poetry", "run", "python", "main.py"]
