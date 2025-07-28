@@ -19,7 +19,7 @@ def create_petstore_agent():
     # Initialize the LLM
     llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
-    # Pull or create a ReAct prompt template
+    # Pull ReAct prompt template from HuggingFace Hub
     prompt = hub.pull("hwchase17/openai-tools-agent")
 
     # Create the agent logic
@@ -30,7 +30,7 @@ def create_petstore_agent():
 
     # Build the agent executor with memory
     agent_executor = AgentExecutor(
-        agent=openai_tools_agent,  # Pass the agent logic
+        agent=openai_tools_agent,  # Pass the agent
         return_intermediate_steps=True,  # Return intermediate steps
         tools=petstore_tools,  # Pass tools to the executor
         memory=memory,  # Pass memory to the executor

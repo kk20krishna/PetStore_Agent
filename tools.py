@@ -1,3 +1,5 @@
+### tools.py
+
 import requests
 import json
 from langchain.tools import tool
@@ -9,8 +11,7 @@ from pydantic import BaseModel, Field
 
 # ---- Constants ----
 
-#BASE_URL = "https://petstore3.swagger.io/api/v3" # Newer (beta) Pet Store API - v3
-BASE_URL = "https://petstore.swagger.io/v2"  # Current Pet Store API - v2
+BASE_URL = "https://petstore.swagger.io/v2"  # Pet Store API - v2
 HEADERS = {"Content-Type": "application/json"}
 
 # ---- Args Schemas ----
@@ -160,28 +161,12 @@ def find_pets_by_status(status: str = "available") -> str:
     return json.dumps(response.json(), indent=2)
 
 
-# Commented out because it doesn't work with the v2 Pet Store API
-# @tool("find_pets_by_tags", args_schema=FindPetsByTagsInput)
-# def find_pets_by_tags(tags: str) -> str:
-#     """
-#     Finds pets by comma-separated tags.
-#     """
-#     url = f"{BASE_URL}/pet/findByTags"
-#     tag_list = [t.strip() for t in tags.split(",") if t.strip()]
-#     response = requests.get(url, params=[('tags', t) for t in tag_list], headers=HEADERS)
-#     response.raise_for_status()
-#     return json.dumps(response.json(), indent=2)
+# Wikipedia tool - this tool can be used to get information from Wikipedia.
 
-# Wikipedia tool
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
 
 # List of all petstore tools
 petstore_tools = [
-    add_pet,
-    update_pet,
-    get_pet_by_id,
-    delete_pet,
-    find_pets_by_status,
-    # find_pets_by_tags, # Commented out because it doesn't work with the v2 Pet Store API
-    wikipedia,
+    add_pet, update_pet, get_pet_by_id, delete_pet, find_pets_by_status,
+    wikipedia
 ]
