@@ -82,12 +82,11 @@ Agent: Uses Wikipedia for breed information, then searches the pet store
 ## Project Structure
 
 ```
-├── app.py             # Main Gradio application
-├── agents.py          # Agent creation and configuration
-├── tools.py           # Pet store API tools and schemas
-├── requirements.txt   # Python dependencies
-├── pyproject.toml     # Project configuration
-└── README.md          # This file
+├── app.py                     # Main Gradio application
+├── agents.py                  # Agent creation and configuration
+├── tools.py                   # Pet store API tools and schemas
+├── PetStore_Agent_report.pdf  # Project Report
+└── README.md                  # This file
 ```
 
 ### Core Components
