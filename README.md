@@ -3,6 +3,36 @@
 
 A AI-powered chatbot built with LangChain and Gradio that intelligently interacts with the Swagger Pet Store API. This agent can perform various pet store operations through natural language conversations, making API interactions intuitive and user-friendly.
 
+## Quick Start
+
+### 1. Environment Setup
+
+Create a `.env` file in the project root:
+
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+### 2. Installation
+
+All dependencies are installed from the requirements.txt file:
+
+- `gradio` - Web interface
+- `langchain` - Agent framework
+- `langchain-openai` - OpenAI integration
+- `requests` - HTTP client
+- `python-dotenv` - Environment management
+
+### 3. Running the Application
+
+Execute:
+
+```bash
+python app.py
+```
+
+The application will start on port 7860 and provide both local and public URLs.
+
 ## Features
 
 - **Intelligent Conversation**: Natural language interface powered by OpenAI's GPT-4o
@@ -17,7 +47,7 @@ A AI-powered chatbot built with LangChain and Gradio that intelligently interact
 - **Framework**: LangChain for agent orchestration
 - **LLM**: OpenAI GPT-4o
 - **UI**: Gradio for web interface
-- **API**: Swagger Pet Store API (v2)
+- **API**: Swagger Pet Store API (v2), Wikipedia
 - **Tools**: Custom pet store tools + Wikipedia integration
 - **Language**: Python 3.12+
 
@@ -120,36 +150,6 @@ The agent integrates with the Swagger Pet Store API v2:
 - Python 3.12 or higher
 - OpenAI API key
 - Internet connection for API calls
-
-## Quick Start
-
-### 1. Environment Setup
-
-Create a `.env` file in the project root:
-
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-### 2. Installation
-
-All dependencies are installed from the requirements.txt file:
-
-- `gradio` - Web interface
-- `langchain` - Agent framework
-- `langchain-openai` - OpenAI integration
-- `requests` - HTTP client
-- `python-dotenv` - Environment management
-
-### 3. Running the Application
-
-Execute:
-
-```bash
-python app.py
-```
-
-The application will start on port 7860 and provide both local and public URLs.
 
 ## 📄 License
 
